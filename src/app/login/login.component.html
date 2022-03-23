@@ -1,0 +1,48 @@
+<div class="account-content">
+    <div class="container">
+        <div class="account-logo">
+            <img src="logo2.png" alt="LOGO" />
+        </div>
+        <div class="account-box">
+            <div class="account-wrapper">
+                <h3 class="account-title">Login</h3>
+                <div style="float: right;" class="form-check form-switch">
+                    <input class="form-check-input" (change)="changeLoginType($event)" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Login as Bidder</label>
+                </div>
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label>Email Address</label><input formControlName="Email" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label>Password</label>
+                            </div>
+                            <div class="col-auto">
+                                <a routerlink="/login/forgot" class="text-muted" href="/light/login/forgot">
+                  Forgot password?
+                </a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input formControlName="Password" class="form-control" type="password" /><span class="fa toggle-password fa-eye"></span>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button (click)="login()" type="submit" class="btn btn-primary account-btn">
+              Login
+            </button>
+                    </div>
+                    <div class="account-footer">
+                        <p>
+                            Don't have an account yet?<br>
+                            <button class="btn btn-success" (click)="registerFarmer()">Register as Farmer</button> Or
+                            <button class="btn btn-danger" (click)="registerBidder()">Register as Bidder</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

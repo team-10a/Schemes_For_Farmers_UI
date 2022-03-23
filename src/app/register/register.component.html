@@ -1,0 +1,320 @@
+<div class="account-content">
+    <div class="container">
+        <div class="account-logo">
+            <img src="logo2.png" alt="LOGO" />
+        </div>
+        <div class="account-box">
+            <div class="account-wrapper">
+                <h3 class="account-title">Register your Self</h3>
+                <p class="account-subtitle">Access to our dashboard</p>
+                <form [formGroup]="Form">
+                    <div class="card-title">
+                        <h1>Personal Details:</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input formControlName="FullName" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label>Contact No.</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="Contact" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Email</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="Email" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="card-title">
+                        <h1>Address Details:</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea formControlName="Address" class="form-control" type="text"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>City</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="City" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label>State</label><input formControlName="State" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <label>Pincode</label><input formControlName="Pincode" type="number" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <ng-container *ngIf="isFarmer">
+                        <hr>
+                        <div class="card-title">
+                            <h1>Land Details:</h1>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label>Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="position-relative">
+                                        <input formControlName="LandAddress" class="form-control" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Area</label>
+                                    <input formControlName="Area" class="form-control" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label>Pin Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="position-relative">
+                                        <input formControlName="LandPincode" class="form-control" type="number" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </ng-container>
+                    <hr>
+                    <div class="card-title">
+                        <h1>Bank Details:</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Account Number</label>
+                                <input formControlName="AccountNumber" class="form-control" type="number" />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>IFSC Code</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="IfscCode" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-title">
+                        <h1>Documnet Upload:</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label>Adhar Card</label>
+                                <input formControlName="AdharCard" class="form-control" type="number" />
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Pan Card</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="Pan" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Trader License</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="TraderLicense" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-title">
+                        <h1>Credentails:</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input formControlName="Password" class="form-control" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Confirm Password</label>
+                                    </div>
+                                </div>
+                                <div class="position-relative">
+                                    <input formControlName="Password" class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group text-center">
+                        <button (click)="register()" type="submit" class="btn btn-primary account-btn">
+                            Register
+                        </button>
+                    </div>
+                    <div class="account-footer">
+                        <p>
+                            Don't have an account yet?
+                            <a routerlink="/login/register" href="/light/login/register">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <form action="action_page.php">
+  <div class="container">
+    <h1>Farmer Registration</h1>
+    <hr>
+    <p>Personal Details</p>
+    <label for="Full Name"><b>Full Name</b></label>
+                                <input type="text" placeholder="Enter Full Name" name="fname" id="fname" required>
+                                <br>
+                                <br>
+                                <label for="Contact No"><b>ContactNo</b></label>
+                                <input id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                <small>Format: 123-456-7890</small>
+
+                                <br>
+                                <br>
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                                <br>
+
+                                <p>Address Details</p>
+                                <input type="text" placeholder="Enter address line1" required>
+                                <br>
+                                <br>
+                                <input type="text" placeholder="Enter address line1" required>
+                                <br>
+                                <br>
+                                <label for="city"><b>City</b></label>
+                                <input type="text" name="city" id="city" required>
+                                <br>
+                                <br>
+                                <label for="state"><b>State</b></label>
+                                <input type="text" name="state" id="state" required>
+                                <br>
+                                <br>
+                                <label for="pincode"><b>Pincode</b></label>
+                                <input type="text" name="pincode" id="pincode" required>
+                                <br>
+                                <br>
+                                <br>
+                                <p>Land Details</p>
+                                <br>
+                                <br>
+                                <label for="area"><b>Area</b></label>
+                                <input type="text" name="area" id="area" required>
+                                <br>
+                                <br>
+                                <label for="address"><b>Address</b></label>
+                                <input type="text" placeholder="Enter address line1" required>
+                                <br>
+                                <br>
+                                <label for="pincode"><b>Pincode</b></label>
+                                <input type="text" name="pincode" id="pincode" required>
+                                <br>
+                                <br>
+                                <br>
+                                <p>Bank Details</p>
+                                <label for="accno"><b>AccountNo</b></label>
+                                <input type="text" name="accno" id="accno" required>
+                                <br>
+                                <br>
+                                <label for="IFSC"><b>IFSC code</b></label>
+                                <input type="text" name="IFSC" id="IFSC" required>
+                                <br>
+                                <br>
+                                <br>
+                                <p>Documents Upload</p>
+                                <br>
+                                <br>
+                                <label for="Adhar"><b>Adhar</b></label>
+                                <input type="text" name="Adhar" id="Adhar" required>
+                                <br>
+                                <br>
+                                <label for="Pan"><b>Pan</b></label>
+                                <input type="text" name="Pan" id="Pan" required>
+                                <br>
+                                <br>
+                                <div>
+                                    Certificate: <input type="file"> <br/> <br/>
+                                </div>
+                                <br>
+                                <br>
+                                <label for="password"><b>Password</b></label>
+                                <input type="text" name="Password" id="Password" required>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <label for="reosw"><b>Repassword</b></label>
+                                <input type="text" name="repsw" id="repsw" required>
+                                <br>
+                                <br>
+
+                                <button type="register" class="registerbtn">Register</button>
+                                <button type="reset" class="resetbtn">Reset</button>
+                            </div>
+                </form> -->

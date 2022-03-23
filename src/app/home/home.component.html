@@ -1,0 +1,83 @@
+<div class="container mt-3">
+    <div class="wrapper">
+        <div class="tab">
+            <ng-container *ngFor="let row of tabs">
+                <button class="tablinks" (click)="openTab(row.id)">{{row.tabtitle}}</button>
+            </ng-container>
+        </div>
+
+        <div *ngIf="tabId==1" class="tabcontent active">
+            <h3>Place Sell Request</h3>
+            <div class="col-md-6">
+                <div class="card p-3 m-5 ">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Crop Type</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Crop Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Fertilizer Type</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Soil PH Certificate</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Place Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="tabId==2" class="tabcontent">
+            <h3>View Sold Crop History</h3>
+            <div class="card p-3 m-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Date</th>
+                            <th scope="col">Crop Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">MSP</th>
+                            <th scope="col">Sold Price</th>
+                            <th scope="col">Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div *ngIf="tabId==3" class="tabcontent">
+            <h3>View Market Place</h3>
+            <p>Coming Soon</p>
+        </div>
+
+    </div>
+</div>

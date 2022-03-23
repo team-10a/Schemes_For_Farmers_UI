@@ -1,0 +1,147 @@
+.account-content {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.account-logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.account-box {
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px #0003;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 480px;
+}
+
+.account-wrapper {
+    padding: 30px;
+}
+
+.account-title {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.account-subtitle {
+    color: #4c4c4c;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.account-box .form-group {
+    margin-bottom: 25px;
+}
+
+.account-footer {
+    text-align: center;
+}
+
+.account-box .form-control {
+    background-color: #fbfbfb;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    height: 46px;
+}
+
+.account-box label {
+    color: #1f1f1f;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+label {
+    display: inline-block;
+}
+
+.toggle-password {
+    cursor: pointer;
+    margin-right: 1px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.account-box .account-btn {
+    background: #ff9b44;
+    background: linear-gradient(to right, #ff9b44 0%, #fc6075 100%);
+    border: 0;
+    border-radius: 4px;
+    display: block;
+    font-size: 22px;
+    padding: 10px 26px;
+    width: 100%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
